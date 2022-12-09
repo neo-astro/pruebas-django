@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-fluid ml-5 mr-5 mt-5">
+  <table class="table table-dark table-bordered table-striped">
+
+      <thead class="text-center">
+          <tr>
+            <th class="col-1 align-middle">Nombre</th>
+            <th class="col-1 align-middle">Apellido paterno</th>
+            <th class="col-1 align-middle">Apellido materno</th>
+            <th class="col-1 align-middle">Fecha de nacimiento</th>
+            <th class="col-1 align-middle">Identificacion</th>
+            <th class="col-1 align-middle">Tipo de Identificacion</th>
+            <th class="col-1 align-middle">Pais</th>
+            <th class="col-1 align-middle">Provincia</th>
+            <th class="col-1 align-middle">Canton/Recinto</th>
+            <th class="col-1 align-middle">Telefono</th>
+            <th class="col-2 align-middle">Acciones</th>
+          </tr>
+      </thead>
+      
+      <tbody>
+        <tr class="text-center">
+          
+
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>
+            <a class="btn btn-success" href="/updateEstudiante">Actualizar</a>
+            <a class="btn btn-danger" onclick="del(this)" id="delUser" href="https://getbootstrap.esdocu.com/docs/5.1/utilities/vertical-align/" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</a>
+        </td>
+
+
+
+
+
+          <!-- estado -->
+          <!-- <td>
+            <div class="btn-status-success center"></div>
+        </td>
+        <td>
+            <div class="btn-status-danger center"></div>
+        </td> -->
+
+        </tr>
+      </tbody>
+
+    </table>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Esta a punto de Eliminar este Usuario,
+        Desea continuar?
+      </div>
+      <div id="confirm" class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
